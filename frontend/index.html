@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AWS Serverless Face Counter using S3, Lambda, API Gateway and Rekognition">
+    <title>AWS Serverless Face Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <div class="badge">AWS Serverless Project</div>
+
+            <h1>👥 Face Counter</h1>
+            <p class="subtitle">
+                Upload an image and detect the number of faces using Amazon Rekognition.
+            </p>
+
+            <label for="imageInput" class="upload-box" id="uploadBox">
+                <span class="upload-icon">🖼️</span>
+                <strong>Select an image</strong>
+                <span>JPG, JPEG or PNG</span>
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/jpeg,image/png"
+                    hidden
+                >
+            </label>
+
+            <img id="preview" class="preview" alt="Selected image preview">
+
+            <button id="uploadButton" type="button">
+                Upload & Detect Faces
+            </button>
+
+            <div id="status" class="status" aria-live="polite"></div>
+
+            <div id="resultBox" class="result">
+                <span class="result-label">Faces Detected</span>
+                <span id="faceCount" class="face-count">0</span>
+            </div>
+
+            <div class="stack">
+                <span>S3</span>
+                <span>Lambda</span>
+                <span>API Gateway</span>
+                <span>Rekognition</span>
+                <span>CloudWatch</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

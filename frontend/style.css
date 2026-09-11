@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 32px 16px;
+}
+
+.card {
+    width: min(520px, 100%);
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(23, 32, 51, 0.12);
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #fff4df;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.subtitle {
+    color: #64748b;
+    line-height: 1.6;
+    margin: 10px 0 24px;
+}
+
+.upload-box {
+    min-height: 170px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 24px;
+    text-align: center;
+}
+
+.upload-box:hover {
+    background: #f8fafc;
+}
+
+.upload-icon {
+    font-size: 34px;
+}
+
+.upload-box span:last-of-type {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.preview {
+    display: none;
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin-top: 18px;
+    border-radius: 16px;
+    background: #f8fafc;
+}
+
+button {
+    width: 100%;
+    margin-top: 18px;
+    border: 0;
+    border-radius: 14px;
+    padding: 14px 18px;
+    font-size: 16px;
+    font-weight: 700;
+    background: #ff9900;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(0.96);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.status {
+    min-height: 24px;
+    margin-top: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.result {
+    display: none;
+    margin-top: 18px;
+    padding: 24px;
+    border-radius: 18px;
+    background: #eefbf3;
+    text-align: center;
+}
+
+.result-label {
+    display: block;
+    color: #466253;
+    font-weight: 700;
+}
+
+.face-count {
+    display: block;
+    margin-top: 6px;
+    font-size: 52px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+    justify-content: center;
+}
+
+.stack span {
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    font-size: 12px;
+    font-weight: 700;
+    color: #475569;
+}
+
+@media (max-width: 560px) {
+    .card {
+        padding: 24px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <defs>
+    <style>
+      .box { fill:#ffffff; stroke:#27364a; stroke-width:2; rx:16; ry:16; }
+      .title { font: 700 22px Arial, sans-serif; fill:#172033; }
+      .label { font: 16px Arial, sans-serif; fill:#475569; }
+      .arrow { stroke:#475569; stroke-width:3; fill:none; marker-end:url(#m); }
+      .accent { fill:#fff4df; stroke:#ff9900; stroke-width:2; rx:16; ry:16; }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <text x="700" y="55" text-anchor="middle" class="title" style="font-size:30px;">AWS Serverless Face Counter</text>
+
+  <rect x="70" y="120" width="220" height="120" class="box"/>
+  <text x="180" y="165" text-anchor="middle" class="title">Web Frontend</text>
+  <text x="180" y="198" text-anchor="middle" class="label">HTML / CSS / JS</text>
+
+  <rect x="365" y="120" width="220" height="120" class="box"/>
+  <text x="475" y="165" text-anchor="middle" class="title">API Gateway</text>
+  <text x="475" y="198" text-anchor="middle" class="label">HTTP API</text>
+
+  <rect x="660" y="120" width="260" height="120" class="accent"/>
+  <text x="790" y="160" text-anchor="middle" class="title">Upload API Lambda</text>
+  <text x="790" y="193" text-anchor="middle" class="label">Presigned URL + Result API</text>
+
+  <rect x="1010" y="120" width="250" height="120" class="box"/>
+  <text x="1135" y="165" text-anchor="middle" class="title">Amazon S3</text>
+  <text x="1135" y="198" text-anchor="middle" class="label">Private image bucket</text>
+
+  <rect x="1010" y="360" width="250" height="120" class="accent"/>
+  <text x="1135" y="402" text-anchor="middle" class="title">Detection Lambda</text>
+  <text x="1135" y="435" text-anchor="middle" class="label">Triggered by S3</text>
+
+  <rect x="660" y="360" width="260" height="120" class="box"/>
+  <text x="790" y="402" text-anchor="middle" class="title">Amazon Rekognition</text>
+  <text x="790" y="435" text-anchor="middle" class="label">DetectFaces API</text>
+
+  <rect x="365" y="360" width="220" height="120" class="box"/>
+  <text x="475" y="402" text-anchor="middle" class="title">CloudWatch</text>
+  <text x="475" y="435" text-anchor="middle" class="label">Lambda logs</text>
+
+  <rect x="70" y="360" width="220" height="120" class="box"/>
+  <text x="180" y="402" text-anchor="middle" class="title">Result</text>
+  <text x="180" y="435" text-anchor="middle" class="label">Faces Detected: N</text>
+
+  <line x1="290" y1="180" x2="365" y2="180" class="arrow"/>
+  <line x1="585" y1="180" x2="660" y2="180" class="arrow"/>
+  <line x1="920" y1="180" x2="1010" y2="180" class="arrow"/>
+
+  <path d="M1135 240 L1135 360" class="arrow"/>
+  <line x1="1010" y1="420" x2="920" y2="420" class="arrow"/>
+  <line x1="660" y1="420" x2="585" y2="420" class="arrow"/>
+
+  <path d="M790 480 C790 610 310 610 180 480" class="arrow"/>
+
+  <text x="325" y="150" text-anchor="middle" class="label">1. Request URL</text>
+  <text x="965" y="150" text-anchor="middle" class="label">2. Signed upload</text>
+  <text x="1160" y="305" text-anchor="start" class="label">3. ObjectCreated</text>
+  <text x="965" y="400" text-anchor="middle" class="label">4. Detect faces</text>
+  <text x="620" y="595" text-anchor="middle" class="label">5. Frontend polls result and displays face count</text>
+</svg>

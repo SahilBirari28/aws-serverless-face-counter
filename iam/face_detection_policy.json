@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "DetectFaces",
+            "Effect": "Allow",
+            "Action": [
+                "rekognition:DetectFaces"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "ReadAndTagUploadedImages",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObjectTagging"
+            ],
+            "Resource": "arn:aws:s3:::YOUR-BUCKET-NAME/*"
+        }
+    ]
+}
